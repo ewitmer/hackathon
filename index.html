@@ -5,7 +5,41 @@
   <title>Document</title>
 </head>
 <body>
-  <ul id='recipes'></ul>
-  <script src='script.js'></script>
+	<div>
+		<p>Some message.</p>
+		<button class='recipeButton'>Button here</button>
+	</div>
+	<div>
+		<p>Second message.</p>
+		<button class='recipeButton'>Button here</button>
+	</div>
+	<div>
+		<p>Third message.</p>
+		<button class='recipeButton'>Button here</button>
+	</div>
+  <script src='script.js'>
+	var selectedRecipes = [];
+	var totalIngredients = {};
+
+	var recipeButton = document.querySelector(".recipeButton"); 
+	console.warn(recipeButton);
+	recipeButton.addEventListener("click", function(event) {
+		console.log(event)
+	    // selectedRecipes.push(addRecipe);
+		});
+	// loop through each object 
+	for(var i = 0; i < selectedRecipes.length; i++) {
+	for (var key in selectedRecipes[i]) {
+		if(selectedRecipes.hasOwnProperty(key))
+			totalIngredients.push('key');
+	};	
+}
+  </script>
 </body>
 </html>
+
+<!-- add jquery rather than class name $('string').-->
+<!-- capture data specific to button click. find items associated with button clicked -->
+<!-- **parent node, what's the main div that the button is in. 'pizza' would have id = 'pizza'. keep recipe information within id -->
+<!-- with jquery have an array of recipes. document.append -->
+<!-- some comment -->
